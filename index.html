@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قياس نسبة الحب</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="https://i.ibb.co/Pt80cKw/copilot-image-1735083263271.jpg" class="love-image">
+      <input type="text" id="name1" placeholder="اسم الأول">
+    </div>
+    <div class="image-container">
+      <img src="https://i.ibb.co/Pt80cKw/copilot-image-1735083263271.jpg" class="love-image">
+      <input type="text" id="name2" placeholder="اسم الثاني">
+    </div>
+    <button id="calculate">قياس نسبة الحب</button>
+    <div id="result-container">
+      <div id="result">0%</div>
+    </div>
+
+    <!-- الهديه التي تهتز -->
+    <div id="gift" class="gift" style="display: none;"> <!-- إخفاء الهدية عند البداية -->
+      <img src="https://i.ibb.co/Pt80cKw/copilot-image-1735083263271.jpg" alt="هدية">
+    </div>
+
+    <!-- نافذة منبثقة لعرض الرسالة عند الضغط على الهدية -->
+    <div id="popup" class="popup" style="display: none;"> <!-- إخفاء النافذة المنبثقة عند البداية -->
+      <div class="popup-content">
+        <span class="popup-close">&times;</span>
+        <p id="popup-message"></p>
+      </div>
+    </div>
+
+    <div class="bubbles"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
