@@ -3,7 +3,7 @@ document.getElementById("calculate").addEventListener("click", () => {
   const name2 = document.getElementById("name2").value.trim();
 
   if (name1 === "" || name2 === "") {
-    alert("من فضلك أدخل اسمين!");
+    alert("من فضلك قم بملئ خانة الحبيب والحبيبه معا");
     return;
   }
 
