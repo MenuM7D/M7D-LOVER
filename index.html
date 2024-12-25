@@ -8,98 +8,24 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#007bff">
   <style>
-    /* إضافة تأثير على الرابط باللون الوردي الفاتح */
+    /* إضافة تأثير على الرابط باللون الوردي */
     #creative-link {
       position: absolute;
       top: 20px;
       right: 20px;
-      background-color: rgba(255, 182, 193, 0.8); /* اللون الوردي الفاتح الشفاف */
+      background-color: rgba(255, 105, 180, 0.7); /* اللون الوردي */
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: transform 0.3s ease;
+      font-size: 16px; /* حجم الخط */
     }
 
     #creative-link:hover {
       transform: scale(1.1);
-      background-color: rgba(255, 182, 193, 1); /* اللون الوردي الفاتح يصبح أكثر إشراقًا عند التحويم */
-    }
-
-    /* القنبلة المتحركة */
-    .bomb {
-      position: absolute;
-      top: 100px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      background-color: #f0f8ff;
-      border-radius: 50%;
-      display: none;
-      animation: moveBomb 1s ease forwards;
-    }
-
-    /* تأثير الحركة للقنبلة */
-    @keyframes moveBomb {
-      0% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-150px) rotate(180deg);
-      }
-      100% {
-        transform: translateY(0) rotate(360deg);
-      }
-    }
-
-    /* تأثير الإنفجار */
-    .explosion {
-      display: none;
-      position: absolute;
-      top: 100px;
-      right: 20px;
-      width: 100px;
-      height: 100px;
-      background-color: rgba(255, 105, 180, 0.7);
-      border-radius: 50%;
-      animation: explode 1s ease-out forwards;
-    }
-
-    @keyframes explode {
-      0% {
-        width: 100px;
-        height: 100px;
-        opacity: 1;
-      }
-      100% {
-        width: 200px;
-        height: 200px;
-        opacity: 0;
-      }
-    }
-
-    /* نافذة الإعلان */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
-
-    .popup .popup-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
-      cursor: pointer;
+      background-color: rgba(255, 105, 180, 1); /* عند التحويم يصبح اللون أكثر إشراقًا */
     }
   </style>
 </head>
@@ -124,69 +50,22 @@
     </div>
 
     <!-- نافذة منبثقة لعرض الرسالة عند الضغط على الهدية -->
-    <div id="popup" class="popup" style="display: none;">
+    <div id="popup" class="popup" style="display: none;"> <!-- إخفاء النافذة المنبثقة عند البداية -->
       <div class="popup-content">
-        <span class="popup-close" id="close-popup">&times;</span>
-        <p>شكراً لدعمك للموقع! <br> <strong>إعلان دعم لصاحب الموقع</strong></p>
+        <span class="popup-close">&times;</span>
+        <p id="popup-message"></p>
       </div>
     </div>
 
+    <div class="bubbles"></div>
+
     <!-- الرابط الإبداعي الذي يظهر بشكل أنيق باللون الوردي -->
-    <a id="creative-link" href="javascript:void(0)">
+    <a id="creative-link" href="https://www.profitablecpmrate.com/saxh5zeb?key=1e436138f67c4e68ac948350c82fd0f5" target="_blank">
       زر الإبداع
     </a>
-
-    <!-- القنبلة -->
-    <div id="bomb" class="bomb"></div>
-
-    <!-- الإنفجار -->
-    <div id="explosion" class="explosion"></div>
   </div>
   
   <script src="script.js"></script>
   <script type='text/javascript' src='//pl25372197.profitablecpmrate.com/a2/e1/de/a2e1de97070f7c8373959adc541ae4ca.js'></script>
-
-  <script>
-    // عند الضغط على الرابط
-    document.getElementById('creative-link').addEventListener('click', function() {
-      // إخفاء الرابط
-      this.style.display = 'none';
-      
-      // إظهار القنبلة
-      var bomb = document.getElementById('bomb');
-      bomb.style.display = 'block';
-      
-      // تشغيل حركة القنبلة
-      bomb.addEventListener('animationend', function() {
-        // إخفاء القنبلة
-        bomb.style.display = 'none';
-        
-        // إظهار الانفجار
-        var explosion = document.getElementById('explosion');
-        explosion.style.display = 'block';
-        
-        // تشغيل الانفجار
-        explosion.addEventListener('animationend', function() {
-          // إخفاء الانفجار
-          explosion.style.display = 'none';
-          
-          // إظهار نافذة الإعلان
-          var popup = document.getElementById('popup');
-          popup.style.display = 'block';
-
-          // بعد ظهور رسالة الإعلان، سيتم فتح الرابط بعد 3 ثوانٍ
-          setTimeout(function() {
-            window.open("https://www.profitablecpmrate.com/saxh5zeb?key=1e436138f67c4e68ac948350c82fd0f5", "_blank");
-          }, 3000); // 3 ثوانٍ بعد عرض الرسالة
-        });
-      });
-    });
-
-    // إغلاق نافذة الإعلان
-    document.getElementById('close-popup').addEventListener('click', function() {
-      var popup = document.getElementById('popup');
-      popup.style.display = 'none';
-    });
-  </script>
 </body>
 </html>
