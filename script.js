@@ -100,16 +100,16 @@ document.getElementById("gift").addEventListener("click", () => {
 
   // تحديد الرسالة والنسبة بناءً على النسبة
   if (percentage <= 10) {
-    message = "علاقة فاشلة";
+    message = "علہٰاقة فہٰاشلہٰة";
     popupColor = "black"; // لون أسود
   } else if (percentage <= 35) {
-    message = "علاقة ناجحة قليلاً مع الكثير من المشاكل";
+    message = "علہٰاقة ناجحہٰة قلہٰيٰلہٰاً مع الہٰكہٰثہٰـيٰر من الہٰمشاكہٰلہٰ";
     popupColor = "lightcoral"; // لون أحمر فاتح
   } else if (percentage <= 70) {
-    message = "علاقة ناجحة مع القليل من المشاكل";
+    message = "علہٰاقة ناجحہٰة مع الہٰقلہٰيٰلہٰ من الہٰمشاكہٰلہٰ";
     popupColor = "darkred"; // لون أحمر غامق
   } else {
-    message = "علاقة ناجحة مع حياة وردية";
+    message = "علہٰاقة ناجحہٰة مع حہٰيٰاة ورديٰة";
     popupColor = "pink"; // لون وردي
   }
 
